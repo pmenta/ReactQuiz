@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import { Home } from './Pages/Home';
-import { Quiz } from './Pages/Quiz';
+import { Home } from './pages/Home';
+import { Quiz } from './pages/Quiz';
 import './styles/global.css'
 
 export function App() {

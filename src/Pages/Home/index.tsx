@@ -26,7 +26,6 @@ export function Home() {
 
     return(
         <HomeContainer>
-            
             <h1>The everything quiz!</h1>
             <img src={ Char1 } alt="Boy using a computer"/>
             <TextField
@@ -46,12 +45,10 @@ export function Home() {
                 component={ Link } to={`/quiz/${ numberOfQuestions }`}>
                 <NavigateNextIcon/>
             </Button>}
-
             { report && (
                 <Report report={report.report} id={report.id} wins={report.wins}/>
             )
             }
-
         </HomeContainer>
     )
 }
