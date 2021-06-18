@@ -2,7 +2,7 @@ import { HomeContainer } from './styles'
 import Char1 from '../../assets/char1.png'
 import TextField from '@material-ui/core/TextField';
 import { useState } from 'react';
-import { Button, Popover } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Link } from 'react-router-dom'
 import { Report } from '../../components/Report';
