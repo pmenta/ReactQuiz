@@ -10,7 +10,7 @@ import { Report } from '../../components/Report';
 export function Home() {
 
     const [numberOfQuestions, setNumberOfQuestions] = useState() as any
-    const [report, setReport] = useState(() => {
+    const [report] = useState(() => {
         const storagedReport = localStorage.getItem('@report')
 
         if ( storagedReport ) {

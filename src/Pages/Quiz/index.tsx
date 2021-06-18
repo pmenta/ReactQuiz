@@ -24,7 +24,7 @@ export function Quiz() {
     useEffect(() => {
         api.get(`api.php?amount=${id}`)
             .then( response => setQuestions( response.data.results ) )
-    }, [])
+    }, [ id ])
 
     useEffect(() => {
         if ( questions.length > 0 ) {
@@ -32,14 +32,14 @@ export function Quiz() {
                 setActualAnswers(ShuffleArray([questions[actualQuestion].correct_answer, ...questions[actualQuestion].incorrect_answers]))
             }   
         }
-    }, [ questions, actualQuestion ])
+    }, [ questions, actualQuestion, id ])
 
     useEffect(() => {
         if ( actualQuestion === Number(id) ) {
             const localReport = {report, id, wins}
             localStorage.setItem('@report', JSON.stringify(localReport))
         }
-    }, [actualQuestion, id])
+    }, [actualQuestion, id, report, wins])
     
 
     return(
